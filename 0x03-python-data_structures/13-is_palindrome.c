@@ -11,8 +11,10 @@
 int is_palindrome(listint_t **head)
 {
 
-	if (head == NULL || *head == NULL)
+	if (!head || !(*head))
+	{
 		return (1);
+	}
 
 	if (p_check(head, *head))
 	{
