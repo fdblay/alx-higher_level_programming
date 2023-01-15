@@ -1,7 +1,11 @@
 #include "lists.h"
+#include <stdio.h>
+#include <stdlib.h>
+
 /**
  * is_palindrome - checks if palindrome
  * @head: head of node
+ *
  * Return: 0 if not, 1 if is
  */
 int is_palindrome(listint_t **head)
