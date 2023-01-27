@@ -1,11 +1,11 @@
 #!/usr/bin/python3
 """Class Square"""
 
+
 class Square:
     """Defines a square with
     - private instance attribute: size
-    - and instantiation with optional 
-    - size: def __init__(self, size=0)"""
+    - and instantiation with optional size: def __init__(self, size=0)"""
 
     def __init__(self, size=0):
         """size is a private attribute:
@@ -13,7 +13,6 @@ class Square:
         exception with the message size must be an integer
         - if size is less than 0, raise a ValueError exception
         with the message size must be >= 0"""
-        
         if(type(size) is not int):
             raise (TypeError("size must be an integer"))
         elif (size < 0):
