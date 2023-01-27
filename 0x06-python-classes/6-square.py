@@ -34,10 +34,10 @@ class Square:
     @property
     def position(self):
         """Retrieves the position."""
-        return self.__postion
+        return self.__position
 
     @position.setter
-    def postion(self, value):
+    def position(self, value):
         """Sets the position to a value."""
         if (type(value) is not tuple) or (len(value) != 2)\
                 or (type(value[0]) is not int)\
