@@ -4,11 +4,11 @@
 
 
 class Rectangle:
-    """Class for printing or computing of dimensions of a rectangle.
+    """Class for printing or computation of dimensions of a rectangle.
 
     Takes in args for width and height of a rectangle, and contains methods
-    for calculation of the area or perimeter. __str__, __repr__ and __del__
-    functionality defined below.
+    for calculation of the area or perimeter. __str__, __repr__, and __del__
+    fuctionality defined below.
 
     Attributes:
         number_of_instances (int): counter incrementing for every
@@ -84,6 +84,7 @@ class Rectangle:
         Raises:
             TypeError: If `value` is not an int.
             ValueError: If `value` is less than 0.
+
         """
         if type(value) is not int:
             raise TypeError('height must be an integer')
@@ -92,7 +93,7 @@ class Rectangle:
         self.__height = value
 
     def area(self):
-        """Returns the rectangle area
+        """Returns area of a rectangle of a given `width` and `height`.
 
         Attributes:
             __width (int): horizontal dimension of rectangle
@@ -105,20 +106,21 @@ class Rectangle:
         return self.__width * self.__height
 
     def perimeter(self):
-        """Returns the rectangle perimeter
+        """Returns the perimeter of a rectangle of given `width` and `height`
 
         Attributes:
             __width (int): horizontal dimension of rectangle
             __height (int): vertical dimension of rectangle
 
         Returns:
-            Perimeter of rectangle: 2 * (__width + __height)
+            0 if either attribute is 0, or the perimeter: (__width * 2) +
+        (__height * 2).
 
         """
-        if self.__width == 0 or self.__height == 0:
+        if self.__width is 0 or self.__height is 0:
             return 0
         else:
-            return 2 * (self.__width + self.__height)
+            return (self.__width * 2) + (self.__height * 2)
 
     def _draw_rectangle(self):
         """Formats a string of '#' and '\n' chars to print the rectangle
@@ -131,7 +133,7 @@ class Rectangle:
 
         Returns:
             str (str): string suitable for printing rectangle (final newline
-            omitted)
+                omitted)
 
         """
         str = ""
@@ -191,6 +193,6 @@ class Rectangle:
         if not isinstance(rect_2, Rectangle):
             raise TypeError('rect_2 must be an instance of Rectangle')
         if rect_1.area() >= rect_2.area():
-             return rect_1
+            return rect_1
         else:
             return rect_2
