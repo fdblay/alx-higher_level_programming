@@ -26,6 +26,7 @@ class Rectangle:
             __width (int): horizontal dimension of rectangle
 
         """
+        return self.__width
 
     @width.setter
     def width(self, value):
