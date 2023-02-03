@@ -105,7 +105,7 @@ class Rectangle:
             return 2 * (self.__width + self.__height)
 
     def _draw_rectangle(self):
-        """Formats a string of '#' and '\n' chars to print the rectangle 
+        """Formats a string of '#' and '\n' chars to print the rectangle
         by the current instance.
 
         Attributes:
@@ -129,7 +129,7 @@ class Rectangle:
         """Allows direct printing of instances.
 
         Returns:
-            The output of _draw_rectangle, which creates a string 
+            The output of _draw_rectangle, which creates a string
             representation of the rectangle suitable for printing.
 
         """
