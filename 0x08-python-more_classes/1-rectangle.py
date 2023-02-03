@@ -4,10 +4,9 @@
 
 
 class Rectangle:
-    """creating private instance attributes by taking in
-    two arguments.
-    
-    
+    """creating private instance attributes by taking in two arguments.
+
+
     Args:
         width (int): horizontal dimension of rectangle, defaults to 0
         height (int): vertical dimension of rectangle, defaults to 0
@@ -52,7 +51,7 @@ class Rectangle:
         """__height getter.
 
         Returns:
-            __height (int): vertical dimension of rectangel
+            __height (int): vertical dimension of rectangle
 
         """
         return self.__height
@@ -72,6 +71,6 @@ class Rectangle:
         """
         if type(value) is not int:
             raise TypeError('heigth must be an integer')
-        if value < 0:
+        elif value < 0:
             raise ValueError('height must be >= 0')
         self.__height = value
