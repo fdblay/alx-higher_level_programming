@@ -10,6 +10,12 @@ class Rectangle:
     for calculation of the area or perimeter. __str__, __repr__ and __del__
     functionality defined below.
 
+    Attributes:
+        number_of_instances (int): counter incrementing for every
+            instantiation, and decrementing for every instance deletion.
+        print_symbol (str): single character to be used in assembling string
+            representation of rectangle
+
     """
     number_of_instances = 0
     print_symbol = '#'
@@ -185,6 +191,6 @@ class Rectangle:
         if not isinstance(rect_2, Rectangle):
             raise TypeError('rect_2 must be an instance of Rectangle')
         if rect_1.area() >= rect_2.area():
-            return rect_1
+             return rect_1
         else:
             return rect_2
