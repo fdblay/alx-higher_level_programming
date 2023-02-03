@@ -1,11 +1,13 @@
 #!/usr/bin/python3
-"""3-rectangle, built for Holberton Python project 0x08 task 3.
+"""5-rectangle, built for Holberton Python project 0x08 task 5.
 """
 
 
 class Rectangle:
-    """At this stage the class only creates private instance attributes by
-    taking in two arguments.
+    """Takes in args for width and height of a rectangle, and contains methods
+    for calculation of the area or perimeter.
+
+    __str__ and __repr__ functionality defined below.
 
     Args:
         width (int): horizontal dimension of rectangle, defaults to 0
@@ -135,3 +137,19 @@ class Rectangle:
 
         """
         return self._draw_rectangle()
+
+    def __repr__(self):
+        """Allows use of eval().
+
+        Returns:
+            A string of the code needed to create the instance.
+
+        """
+        return "Rectangle({:d}, {:d})".format(self.__width, self.__height)
+
+    @staticmethod
+    def __del__():
+        """Prints message upon deletion of instance.
+
+        """
+        print('Bye rectangle...')
