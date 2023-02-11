@@ -1,5 +1,5 @@
 #!/usr/bin/python3
-#4-inherits_from.py
+# 4-inherits_from.py
 """Defines an inheriter class-verifying function."""
 
 
