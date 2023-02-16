@@ -6,5 +6,8 @@ def write_file(filename="", text=""):
     """writes a string to a text file (UTF8) and
     returns the number of characters"""
     with open(filename, "w") as f:
-        no_of_chars = f.write(text)
-    return no_of_chars
+        f.write(text)
+        num = 0
+        for char in text:
+            num += 1
+    return num
